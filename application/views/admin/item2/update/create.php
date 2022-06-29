@@ -171,6 +171,67 @@
 
 
 
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 noBlock">
+                        <div class="row">
+
+
+                            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                                <div class="row">
+                                    <label for="teacher">TEACHER</label>
+                                    <select id="teacher" class="form-control" name="teacher">
+                                        <option value="">-SELECT-</option>
+                                        <?php foreach ($get_all_teachers as $get_all_teachers_key){ ?>
+                                            <option <?php if($single_item->teacher == $get_all_teachers_key->t_id){ echo "SELECTED"; } ?> value="<?php echo $get_all_teachers_key->t_id; ?>"><?php echo $get_all_teachers_key->t_title; ?></option>
+                                        <?php } ?>
+                                    </select>
+                                </div>
+                                <br>
+                            </div>
+
+                            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 noBlock">
+
+                                <label for="duration">DURATION</label>
+                                <input type="text" name="duration" id="duration" class="form-control" placeholder="Monts / Hours" value="<?php echo $single_item->duration ; ?>">
+                                <!-- form validation start display show -->
+                                <?php if(isset($form_error)){ ?>
+                                    <small class="form_error_style"><?php echo form_error("duration"); ?></small>
+                                <?php } ?>
+                                <!-- form validation end display show -->
+
+                            </div>
+
+                            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 noBlock">
+
+                                <label for="schedule">SCHEDULE</label>
+                                <input type="text" name="schedule" id="schedule" class="form-control" placeholder="II 8:30-14:30, III 9:30-15:30" value="<?php echo $single_item->schedule ; ?>">
+                                <!-- form validation start display show -->
+                                <?php if(isset($form_error)){ ?>
+                                    <small class="form_error_style"><?php echo form_error("schedule"); ?></small>
+                                <?php } ?>
+                                <!-- form validation end display show -->
+
+                            </div>
+
+
+
+                            <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 noBlock">
+                                <div class="row">
+                                    <label for="group_size">group_size</label>
+                                    <input type="text" name="group_size" id="group_size" class="form-control" placeholder="10 person" value="<?php echo $single_item->group_size ; ?>">
+                                    <!-- form validation start display show -->
+                                    <?php if(isset($form_error)){ ?>
+                                        <small class="form_error_style"><?php echo form_error("group_size"); ?></small>
+                                    <?php } ?>
+                                    <!-- form validation end display show -->
+                                </div>
+                            </div>
+
+
+
+
+                        </div>
+                        <br>
+                    </div>
 
 
 
@@ -188,7 +249,7 @@
                     </div> 
 
 
-                    <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 noBlock">
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 noBlock">
                         
                             <label for="cate">CATEGORY</label>
                             <select id="cate" class="form-control" name="category">

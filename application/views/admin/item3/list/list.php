@@ -106,7 +106,7 @@
                         <thead>
                         <tr>
                             <th class="text-center">#</th>
-                            <th>Title</th>
+                            <th>Name, surname</th>
                             <th class="text-center">Date</th>
                             <th class="text-center">Img</th>
                             <th>Status</th>

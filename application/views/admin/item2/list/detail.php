@@ -96,7 +96,7 @@
 
                 <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 noBlock">
                     <div id="aze" class="tab-content current">
-                        <label for="taze"><b>TITLE AZ</b></label>
+                        <label for="taze"><b>COURSE AZ</b></label>
                         <p><?php echo $single_item->title; ?></p>
 
                         <br>
@@ -107,7 +107,7 @@
                         <br>
                     </div>
                     <div id="eng" class="tab-content">
-                        <label for="teng"><b>TITLE EN</b></label>
+                        <label for="teng"><b>COURSE EN</b></label>
                         <p><?php echo $single_item->title_en; ?></p>
                         <br>
 
@@ -116,7 +116,7 @@
                         <br>
                     </div>
                     <div id="rus" class="tab-content">
-                        <label for="trus"><b>TITLE RU</b></label>
+                        <label for="trus"><b>COURSE RU</b></label>
                         <p><?php echo $single_item->title_ru; ?></p>
                         <br>
 
@@ -125,7 +125,7 @@
                         <br>
                     </div>
                     <div id="tur" class="tab-content">
-                        <label for="ttre"><b>TITLE TR</b></label>
+                        <label for="ttre"><b>COURSE TR</b></label>
                         <p><?php echo $single_item->title_tr; ?></p>
                         <br>
 
@@ -139,20 +139,63 @@
 
 
 
-                    <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 noBlock" style="padding: 0px">
-                        <label for="date"><b>DATE</b></label>
-                        <p><?php echo date("d-m-Y", strtotime($single_item->date)); ?></p>
+
+
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 noBlock">
+                        <label for="cate"><b>CATEGORY</b></label>
+                        <p><?php echo $single_item->i_c_name; ?></p>
                     </div>
+
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 noBlock">
+                        <label for="cate"><b>TEACHER</b></label>
+                        <p><?php echo $single_item->t_title; ?></p>
+                    </div>
+
+                    <?php if($single_item->date){ ?>
+                        <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 noBlock" style="padding: 0px">
+                            <label for="date"><b>START DATE</b></label>
+                            <p><?php echo date("d-m-Y", strtotime($single_item->date)); ?></p>
+                        </div>
+                    <?php } ?>
 
                     <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 noBlock">
                         <label for="status"><b>STATUS</b></label>
                         <p><?php echo $single_item->i_s_name; ?></p>
                     </div>
 
-                    <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 noBlock">
-                        <label for="cate"><b>CATEGORY</b></label>
-                        <p><?php echo $single_item->i_c_name; ?></p>
-                    </div>
+
+
+
+
+                    <?php if($single_item->duration){ ?>
+                        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 noBlock">
+                            <label for="status"><b>DURATION</b></label>
+                            <p><?php echo $single_item->duration; ?></p>
+                        </div>
+                    <?php } ?>
+
+
+                    <?php if($single_item->group_size){ ?>
+                        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 noBlock">
+                            <label for="status"><b>GROUP SIZE</b></label>
+                            <p><?php echo $single_item->group_size; ?></p>
+                        </div>
+                    <?php } ?>
+
+
+                    <?php if($single_item->schedule){ ?>
+                        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 noBlock">
+                            <div class="row">
+                                <label for="status"><b>SCHEDULE</b></label>
+                                <p><?php echo $single_item->schedule; ?></p>
+                            </div>
+                        </div>
+                    <?php } ?>
+
+
+
+
+
 
 
                 </div>

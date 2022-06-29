@@ -20,13 +20,22 @@ class Item2Controller extends CI_Controller{
         $viewData = new stdClass();
 
 
+
         $items = $this->item2_model->get_all();
 
         $viewData->rootFolder = $this->rootFolder;
         $viewData->viewFolder = $this->viewFolder;
         $viewData->subViewFolder = "list";
 
+        $get_all_teachers   = $this->item2_model->get_all_teachers();
+        $viewData->get_all_teachers   = $get_all_teachers;
+//        print_r('<pre>');
+//        print_r($viewData->get_all_teachers);
+//        die();
         $viewData->items = $items;
+
+
+
 
         $this->load->view("{$viewData->rootFolder}/{$viewData->viewFolder}/{$viewData->subViewFolder}/list",$viewData);
     }
@@ -40,6 +49,11 @@ class Item2Controller extends CI_Controller{
         $viewData->get_all_item_category = $get_all_item_category;
         $viewData->get_all_item_status   = $get_all_item_status;
 
+
+        $get_all_teachers   = $this->item2_model->get_all_teachers();
+        $viewData->get_all_teachers   = $get_all_teachers;
+
+
         $viewData->rootFolder = $this->rootFolder;
         $viewData->viewFolder = $this->viewFolder;
         $viewData->subViewFolder = "add";
@@ -51,6 +65,7 @@ class Item2Controller extends CI_Controller{
 
         $this->form_validation->set_rules("title_az", "TITLE AZ", "required|trim");
         $this->form_validation->set_rules("descr_az", "DESCRIPTION AZ", "required|trim");
+        $this->form_validation->set_rules("teacher", "TEACHER", "required|trim");
 
         // $this->form_validation->set_rules("title_en", "TITLE EN", "required|trim");
         // $this->form_validation->set_rules("descr_en", "DESCRIPTION EN", "required|trim");
@@ -91,6 +106,14 @@ class Item2Controller extends CI_Controller{
             $category = $_POST['category'];
             $status   = $_POST['status'];
 
+            $teacher  = $_POST['teacher'];
+
+            $duration = $_POST['duration'];
+            $schedule = $_POST['schedule'];
+            $group_size   = $_POST['group_size'];
+
+
+
             $config['upload_path']          = 'upload/courses/';
             $config['allowed_types']    = 'gif|jpg|png|pdf|jpeg';
 
@@ -126,6 +149,10 @@ class Item2Controller extends CI_Controller{
                 'status'         => $status,
                 'creater_id'     => $_SESSION['admin_id'],
                 'creat_date'     => date("Y-m-d H:i:s"),
+                'teacher'        => $teacher,
+                'duration'       => $duration,
+                'schedule'       => $schedule,
+                'group_size'     => $group_size,
             ];
 
             $data = $this->security->xss_clean($data);
@@ -177,6 +204,9 @@ class Item2Controller extends CI_Controller{
         $viewData->get_all_item_category = $get_all_item_category;
         $viewData->get_all_item_status   = $get_all_item_status;
 
+        $get_all_teachers   = $this->item2_model->get_all_teachers();
+        $viewData->get_all_teachers   = $get_all_teachers;
+
         $viewData->single_item   = $item;
 
         $viewData->rootFolder = $this->rootFolder;
@@ -193,6 +223,7 @@ class Item2Controller extends CI_Controller{
         $this->form_validation->set_rules("date", "DATE", "required|trim");
         $this->form_validation->set_rules("category", "CATEGORY", "required|trim");
         $this->form_validation->set_rules("status", "STATUS", "required|trim");
+        $this->form_validation->set_rules("teacher", "TEACHER", "required|trim");
 
         $this->form_validation->set_message(
             array(
@@ -219,6 +250,12 @@ class Item2Controller extends CI_Controller{
             $date     = $_POST['date'];
             $category = $_POST['category'];
             $status   = $_POST['status'];
+
+            $teacher  = $_POST['teacher'];
+
+            $duration = $_POST['duration'];
+            $schedule = $_POST['schedule'];
+            $group_size   = $_POST['group_size'];
 
             $data_id = [
                 "c_id" =>$id,
@@ -264,6 +301,11 @@ class Item2Controller extends CI_Controller{
                 'status'         => $status,
                 'updater_id'     => $_SESSION['admin_id'],
                 'update_date'    => date("Y-m-d H:i:s"),
+                'teacher'    => $teacher,
+
+                'duration'       => $duration,
+                'schedule'       => $schedule,
+                'group_size'     => $group_size,
             ];
 
             $data = $this->security->xss_clean($data);
@@ -332,6 +374,13 @@ class Item2Controller extends CI_Controller{
         $get_all_item_status   = $this->item2_model->get_all_item_status();
         $viewData->get_all_item_category = $get_all_item_category;
         $viewData->get_all_item_status   = $get_all_item_status;
+
+
+        $get_all_teachers   = $this->item2_model->get_all_teachers();
+        $viewData->get_all_teachers   = $get_all_teachers;
+//        print_r('<pre>');
+//        print_r($viewData->get_all_teachers);
+//        die();
 
         $viewData->single_item   = $item;
 

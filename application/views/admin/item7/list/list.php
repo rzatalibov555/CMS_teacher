@@ -86,7 +86,7 @@
     <div class="col-md-12">
 
         <div class="main-card mb-3 card">
-            <div class="card-header">Training List
+            <div class="card-header">Programm List
                 <div class="btn-actions-pane-right">
                     <div role="group" class="btn-group-sm btn-group">
                         <a href="<?php echo base_url('admin_create_item_tr'); ?>">

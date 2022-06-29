@@ -5,6 +5,7 @@ class Item2_model extends CI_Model{
     public $tableName = "items2";
     public $categoryTableName = "item_category";
     public $statusTableName = "item_status";
+    public $courseTableName = "items3";
 
 
     public function __construct()
@@ -14,7 +15,9 @@ class Item2_model extends CI_Model{
 
     public function get_all($where = array())
     {
-        return $this->db->order_by('c_id','DESC')->where($where)->get($this->tableName)->result();
+        return $this->db->order_by('c_id','DESC')
+            ->join('items3','items3.t_id = items2.teacher','left')
+            ->where($where)->get($this->tableName)->result();
     }
 
     public function get_single($where = array())
@@ -22,6 +25,7 @@ class Item2_model extends CI_Model{
         return $this->db
             ->join('item_category', 'item_category.i_c_id = items2.category')
             ->join('item_status', 'item_status.i_s_id = items2.status')
+            ->join('items3','items3.t_id = items2.teacher','left')
             ->where($where)->get($this->tableName)->row();
     }
 
@@ -48,5 +52,17 @@ class Item2_model extends CI_Model{
     {
         return $this->db->where($where)->delete($this->tableName);
     }
+
+
+
+
+//    ===============
+    public function get_all_teachers(){
+        return $this->db->order_by('t_id',"DESC")->get($this->courseTableName)->result();
+    }
+//    ===============
+
+
+
 
 }

@@ -49,10 +49,12 @@ if (empty($adminInfo['a_id'])){
                                     </li>
                                 <?php } ?>
 
-                                 <li>
-                                    <a href="<?php echo base_url ('admin_item_list');?>" >
+
+
+                                <li>
+                                    <a href="<?php echo base_url ('admin_item_t_list');?>" >
                                         <i class="metismenu-icon pe-7s-rocket"></i>
-                                        Events
+                                        Teachers
                                     </a>
                                 </li>
 
@@ -64,9 +66,16 @@ if (empty($adminInfo['a_id'])){
                                 </li>
 
                                 <li>
-                                    <a href="<?php echo base_url ('admin_item_t_list');?>" >
+                                    <a href="<?php echo base_url ('admin_item_tr_list');?>" >
                                         <i class="metismenu-icon pe-7s-rocket"></i>
-                                        Teachers
+                                        Programm
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="<?php echo base_url ('admin_item_list');?>" >
+                                        <i class="metismenu-icon pe-7s-rocket"></i>
+                                        Events
                                     </a>
                                 </li>
 
@@ -91,12 +100,7 @@ if (empty($adminInfo['a_id'])){
                                     </a>
                                 </li>
 
-                                <li>
-                                    <a href="<?php echo base_url ('admin_item_tr_list');?>" >
-                                        <i class="metismenu-icon pe-7s-rocket"></i>
-                                        Training
-                                    </a>
-                                </li>
+
 
                                 <li>
                                     <a href="<?php echo base_url ('admin_item_ce_list');?>" >

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 29, 2022 at 10:38 AM
+-- Generation Time: Jun 29, 2022 at 01:54 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -133,17 +133,19 @@ CREATE TABLE `items2` (
   `creater_id` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `creat_date` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `updater_id` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `update_date` varchar(255) COLLATE utf8_unicode_ci NOT NULL
+  `update_date` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `teacher` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `duration` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `group_size` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `schedule` varchar(255) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `items2`
 --
 
-INSERT INTO `items2` (`c_id`, `title`, `title_en`, `title_ru`, `title_tr`, `description`, `description_en`, `description_ru`, `description_tr`, `rank`, `date`, `category`, `img`, `img_ext`, `status`, `creater_id`, `creat_date`, `updater_id`, `update_date`) VALUES
-(2, 'hello az 12', 'hello en 22', 'hello ru 32', 'hello tr 42', '<p>tete az 12</p>', '<p>tete en 22</p>', '<p>tete ru 32</p>', '<p>tete tr 42</p>', '', '2022-06-16', '1', 'Foto_(iOS).png', '.png', 2, '', '', '21', '2022-06-16 13:54:14'),
-(5, 'hey', 'hey2', 'hey3', 'hey4', '<p>aaadfad111</p>', '<p>adadas222</p>', '<p>dasdcczxcxx333</p>', '<p>adasdasdsadsASA444</p>', '', '2022-06-16', '1', '', '.png', 1, '21', '2022-06-16 13:57:47', '', ''),
-(6, 'GA1', 'GA2', 'GA3', 'GA4', '<p>ADSAD111</p>', '<p>ADSADASD22</p>', '<p>DSDAD333</p>', '<p>DASDASD444</p>', '', '2022-06-16', '1', 'images.jpg', '.jpg', 2, '21', '2022-06-16 13:58:28', '', '');
+INSERT INTO `items2` (`c_id`, `title`, `title_en`, `title_ru`, `title_tr`, `description`, `description_en`, `description_ru`, `description_tr`, `rank`, `date`, `category`, `img`, `img_ext`, `status`, `creater_id`, `creat_date`, `updater_id`, `update_date`, `teacher`, `duration`, `group_size`, `schedule`) VALUES
+(9, 'HTML5 AZ1', 'HTML5 EN', 'HTML5 RU', 'HTML5 TR', '<p>lorem description az1</p>', '<p>lorem description en</p>', '<p>lorem description ru</p>', '<p>lorem description tr</p>', '', '2022-06-30', '10', 'images4.jpg', '.jpg', 1, '21', '2022-06-29 13:42:00', '21', '2022-06-29 13:43:22', '5', '2 month / 300 hours1', '12 person1', 'II 9:30 - 12:30, V 16.00 - 19:001');
 
 -- --------------------------------------------------------
 
@@ -187,7 +189,7 @@ CREATE TABLE `items3` (
 
 INSERT INTO `items3` (`t_id`, `t_title`, `t_title_en`, `t_title_ru`, `t_title_tr`, `t_description`, `t_description_en`, `t_description_ru`, `t_description_tr`, `t_position_az`, `t_position_en`, `t_position_ru`, `t_position_tr`, `t_fb`, `t_instagram`, `t_twitter`, `t_linkedin`, `t_rank`, `t_date`, `t_category`, `t_img`, `t_img_ext`, `t_status`, `t_creater_id`, `t_creat_date`, `t_updater_id`, `t_update_date`) VALUES
 (5, 'test az', 'test en', 'test ru', 'test tr', '<p>test descr az</p>', '<p>test descr en</p>', '<p>test descr ru</p>', '<p>test descr tr</p>', 'position az', 'position en', 'position ru', 'position tr', 'https://www.facebook.com/', 'https://www.instagram.com/', 'https://www.twitter.com/', '', '', '2022-06-29', '1', 'road_sign_361513_960_720.jpg', '.jpg', 1, '21', '2022-06-29 08:59:39', '', ''),
-(6, 'test az1', 'test en1', 'test ru1', 'test tr1', '<p>Az Only a quid me old mucker squiffy tomfoolery grub cheers ruddy cor blimey guvnor in my flat, up the duff Eaton car boot up the kyver pardon you A bit of how\'s your father David skive off sloshed, don\'t get shirty with me chip shop vagabond crikey bugger Queen\'s English chap. Matie boy nancy boy bite your arm off up the kyver old no biggie fantastic boot, David have it show off show off pick your nose and blow off lost the plot porkies bits and bobs only a quid bugger all mate, absolutely bladdered bamboozled it\'s your round don\'t get shirty with me down the pub well.</p>', '<p>En Only a quid me old mucker squiffy tomfoolery grub cheers ruddy cor blimey guvnor in my flat, up the duff Eaton car boot up the kyver pardon you A bit of how\'s your father David skive off sloshed, don\'t get shirty with me chip shop vagabond crikey bugger Queen\'s English chap. Matie boy nancy boy bite your arm off up the kyver old no biggie fantastic boot, David have it show off show off pick your nose and blow off lost the plot porkies bits and bobs only a quid bugger all mate, absolutely bladdered bamboozled it\'s your round don\'t get shirty with me down the pub well.</p>', '<p>Only a quid me old mucker squiffy tomfoolery grub cheers ruddy cor blimey guvnor in my flat, up the duff Eaton car boot up the kyver pardon you A bit of how\'s your father David skive off sloshed, don\'t get shirty with me chip shop vagabond crikey bugger Queen\'s English chap. Matie boy nancy boy bite your arm off up the kyver old no biggie fantastic boot, David have it show off show off pick your nose and blow off lost the plot porkies bits and bobs only a quid bugger all mate, absolutely bladdered bamboozled it\'s your round don\'t get shirty with me down the pub well.</p>', '<p>Tr Only a quid me old mucker squiffy tomfoolery grub cheers ruddy cor blimey guvnor in my flat, up the duff Eaton car boot up the kyver pardon you A bit of how\'s your father David skive off sloshed, don\'t get shirty with me chip shop vagabond crikey bugger Queen\'s English chap. Matie boy nancy boy bite your arm off up the kyver old no biggie fantastic boot, David have it show off show off pick your nose and blow off lost the plot porkies bits and bobs only a quid bugger all mate, absolutely bladdered bamboozled it\'s your round don\'t get shirty with me down the pub well.</p>', 'CO Founder az1', 'CO Founder en1', 'CO Founder ru1', 'CO Founder tr', 'https://www.facebook.com/', 'https://www.instagram.com/', 'https://www.instagram.com/', 'https://www.linkedin.com/', '', '2022-06-30', '1', 'teacger-1.jpg', '.jpg', 1, '21', '2022-06-29 09:01:35', '21', '2022-06-29 10:10:05');
+(6, 'Talibov Mammadrza', 'test en1', 'test ru1', 'test tr1', '<p>Az Only a quid me old mucker squiffy tomfoolery grub cheers ruddy cor blimey guvnor in my flat, up the duff Eaton car boot up the kyver pardon you A bit of how\'s your father David skive off sloshed, don\'t get shirty with me chip shop vagabond crikey bugger Queen\'s English chap. Matie boy nancy boy bite your arm off up the kyver old no biggie fantastic boot, David have it show off show off pick your nose and blow off lost the plot porkies bits and bobs only a quid bugger all mate, absolutely bladdered bamboozled it\'s your round don\'t get shirty with me down the pub well.</p>', '<p>En Only a quid me old mucker squiffy tomfoolery grub cheers ruddy cor blimey guvnor in my flat, up the duff Eaton car boot up the kyver pardon you A bit of how\'s your father David skive off sloshed, don\'t get shirty with me chip shop vagabond crikey bugger Queen\'s English chap. Matie boy nancy boy bite your arm off up the kyver old no biggie fantastic boot, David have it show off show off pick your nose and blow off lost the plot porkies bits and bobs only a quid bugger all mate, absolutely bladdered bamboozled it\'s your round don\'t get shirty with me down the pub well.</p>', '<p>Only a quid me old mucker squiffy tomfoolery grub cheers ruddy cor blimey guvnor in my flat, up the duff Eaton car boot up the kyver pardon you A bit of how\'s your father David skive off sloshed, don\'t get shirty with me chip shop vagabond crikey bugger Queen\'s English chap. Matie boy nancy boy bite your arm off up the kyver old no biggie fantastic boot, David have it show off show off pick your nose and blow off lost the plot porkies bits and bobs only a quid bugger all mate, absolutely bladdered bamboozled it\'s your round don\'t get shirty with me down the pub well.</p>', '<p>Tr Only a quid me old mucker squiffy tomfoolery grub cheers ruddy cor blimey guvnor in my flat, up the duff Eaton car boot up the kyver pardon you A bit of how\'s your father David skive off sloshed, don\'t get shirty with me chip shop vagabond crikey bugger Queen\'s English chap. Matie boy nancy boy bite your arm off up the kyver old no biggie fantastic boot, David have it show off show off pick your nose and blow off lost the plot porkies bits and bobs only a quid bugger all mate, absolutely bladdered bamboozled it\'s your round don\'t get shirty with me down the pub well.</p>', 'CO Founder az1', 'CO Founder en1', 'CO Founder ru1', 'CO Founder tr', 'https://www.facebook.com/', 'https://www.instagram.com/', 'https://www.instagram.com/', 'https://www.linkedin.com/', '', '2022-06-30', '1', 'teacger-1.jpg', '.jpg', 1, '21', '2022-06-29 09:01:35', '21', '2022-06-29 12:18:31');
 
 -- --------------------------------------------------------
 
@@ -327,14 +329,6 @@ CREATE TABLE `items7` (
   `tr_update_date` varchar(255) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
---
--- Dumping data for table `items7`
---
-
-INSERT INTO `items7` (`tr_id`, `tr_url`, `tr_title`, `tr_title_en`, `tr_title_ru`, `tr_title_tr`, `tr_description`, `tr_description_en`, `tr_description_ru`, `tr_description_tr`, `tr_rank`, `tr_date`, `tr_category`, `tr_img`, `tr_img_ext`, `tr_status`, `tr_creater_id`, `tr_creat_date`, `tr_updater_id`, `tr_update_date`) VALUES
-(1, '', 'demo az', 'demo en', 'demo ru', 'demo tr', '<p>demo descr az</p>', '<p>demo descr en</p>', '<p>demo descr ru</p>', '<p>demo descr tr</p>', '', '2022-06-20', '1', 'images.jpg', '.jpg', 1, '21', '2022-06-20 09:10:08', '', ''),
-(2, '', 'aq1', 'aq2', 'aq3', 'aq4', '<p>aqqq1</p>', '<p>aqqq2</p>', '<p>aqqq3</p>', '<p>aqqq4</p>', '', '2022-06-20', '2', 'rza_replay_black-02.png', '.png', 1, '21', '2022-06-20 09:11:02', '', '');
-
 -- --------------------------------------------------------
 
 --
@@ -425,8 +419,17 @@ CREATE TABLE `item_category` (
 --
 
 INSERT INTO `item_category` (`i_c_id`, `i_c_name`) VALUES
-(1, 'Sports'),
-(2, 'Finance');
+(1, 'Software engineering'),
+(2, 'Product Owner'),
+(3, 'IT Business Analyst'),
+(4, 'Product Owner basics'),
+(5, 'Backend with Java'),
+(6, 'Interaction Design (UI/UX)'),
+(7, 'Digital Marketing'),
+(8, 'Machine Learning'),
+(9, 'Mobile Development'),
+(10, 'Backend'),
+(11, 'Frontend');
 
 -- --------------------------------------------------------
 
@@ -756,7 +759,7 @@ ALTER TABLE `items`
 -- AUTO_INCREMENT for table `items2`
 --
 ALTER TABLE `items2`
-  MODIFY `c_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `c_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `items3`
@@ -804,7 +807,7 @@ ALTER TABLE `items9`
 -- AUTO_INCREMENT for table `item_category`
 --
 ALTER TABLE `item_category`
-  MODIFY `i_c_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `i_c_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `item_category3`

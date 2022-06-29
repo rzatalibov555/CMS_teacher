@@ -106,8 +106,9 @@
                         <thead>
                         <tr>
                             <th class="text-center">#</th>
-                            <th>Title</th>
-                            <th class="text-center">Date</th>
+                            <th>Course</th>
+                            <th>Teacher</th>
+                            <th class="text-center">Start date</th>
                             <th class="text-center">Img</th>
                             <th>Status</th>
                             <th class="text-center">Actions</th>
@@ -119,6 +120,7 @@
                                 <tr>
                                     <td class="text-center text-muted"><?php echo $itemCount++; ?></td>
                                     <td><?php echo $item->title; ?></td>
+                                    <td><?php echo $item->t_title; ?></td>
                                     <td class="text-center"><?php echo date("d-m-Y", strtotime($item->date)); ?></td>
 
                                     <td class="text-center">
@@ -149,6 +151,11 @@
                                                     class="mr-2 btn-icon btn-icon-only btn btn-outline-danger button_remove">
                                                     <i class="pe-7s-trash btn-icon-wrapper"> </i>
                                             </button>
+
+                                        <a href="<?php echo base_url ('admin_item_tr_list/');?>" >
+                                            <button class="btn-wide btn btn-outline-success">Programm</button>
+
+                                        </a>
                                     </td>
                                 </tr>
 
